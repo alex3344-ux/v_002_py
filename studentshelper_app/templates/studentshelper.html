@@ -1,0 +1,19 @@
+{% extends 'layout/base.html' %}
+
+{% block title %}
+    Главная страница
+{% endblock %}
+
+{% block content %}
+    <!-- Team Start -->
+        {% for subject_item in subjects %}
+            <div>
+                <p style="font-weight: bold;">Предмет: {{ subject_item.subjects }}</p>
+                <p>Студенты:</p>
+
+                    <span>Фамилия: </span>{{ subject_item.last_name }} <span>Имя: </span>{{ subject_item.first_name }}
+            </div>
+        {% endfor %}
+
+    <!-- Team End -->
+{% endblock %}
